@@ -19,7 +19,7 @@ public class UserConvert {
 	
 	public UserDTO convertEntityToDTO(User user) {
 		UserDTO dto = new UserDTO();
-		dto.setId(user.getId());
+		dto.setId(user.getId_user());
 		dto.setUsername(user.getUsername());
 		dto.setUser_password(user.getUser_password());
 		dto.setUser_role(user.getUser_role());
@@ -36,7 +36,7 @@ public class UserConvert {
 	
 	public User convertDTOToEntity(UserDTO dto) {
 		User user = new User();
-		user.setId(dto.getId());
+		user.setId_user(dto.getId());
 		user.setUsername(dto.getUsername());
 		user.setUser_password(dto.getUser_password());
 		user.setUser_role(dto.getUser_role());

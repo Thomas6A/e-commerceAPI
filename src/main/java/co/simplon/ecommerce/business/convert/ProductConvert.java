@@ -27,7 +27,7 @@ public class ProductConvert {
 		}
 
 		final Product result = new Product();
-		result.setId(dto.getId());
+		result.setId_product(dto.getId());
 		result.setProduct_name(dto.getProduct_name());
 		result.setProduct_description(dto.getProduct_description());
 		result.setProduct_price(dto.getProduct_price());
@@ -50,7 +50,7 @@ public class ProductConvert {
 		}
 
 		final ProductDTO result = new ProductDTO();
-		result.setId(product.getId());
+		result.setId(product.getId_product());
 		result.setProduct_name(product.getProduct_name());
 		result.setProduct_description(product.getProduct_description());
 		result.setProduct_price(product.getProduct_price());
