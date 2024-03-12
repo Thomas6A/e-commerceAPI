@@ -5,12 +5,12 @@ import org.springframework.stereotype.Service;
 
 import co.simplon.ecommerce.business.convert.UserConvert;
 import co.simplon.ecommerce.business.dto.UserDTO;
-import co.simplon.ecommerce.persistance.repository.UserRepository;
+import co.simplon.ecommerce.persistance.repository.IUserRepository;
 
 @Service
 public class UserServiceImpl implements IUserService {
 	
-	private UserRepository repo;
+	private IUserRepository repo;
 
 	@Override
 	public void createUser(UserDTO user) {
@@ -25,7 +25,7 @@ public class UserServiceImpl implements IUserService {
 	}
 
 	@Autowired
-	public void setRepo(UserRepository repo) {
+	public void setRepo(IUserRepository repo) {
 		this.repo = repo;
 	}
 	
