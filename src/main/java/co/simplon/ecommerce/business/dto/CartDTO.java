@@ -1,6 +1,6 @@
 package co.simplon.ecommerce.business.dto;
 
-import java.util.Set;
+import java.util.List;
 
 public class CartDTO {
 	
@@ -8,7 +8,7 @@ public class CartDTO {
 	
 	private UserDTO user;
 	
-	private Set<ProductDTO> products;
+	private List<ProductDTO> products;
 
 	public int getId() {
 		return id;
@@ -26,11 +26,11 @@ public class CartDTO {
 		this.user = user;
 	}
 
-	public Set<ProductDTO> getProducts() {
+	public List<ProductDTO> getProducts() {
 		return products;
 	}
 
-	public void setProducts(Set<ProductDTO> products) {
+	public void setProducts(List<ProductDTO> products) {
 		this.products = products;
 	}
 	

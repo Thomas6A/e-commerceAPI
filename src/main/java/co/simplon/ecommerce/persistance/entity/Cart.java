@@ -1,6 +1,6 @@
 package co.simplon.ecommerce.persistance.entity;
 
-import java.util.Set;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,7 +29,7 @@ public class Cart {
 			name= "contain",
 			joinColumns = @JoinColumn(name = "id_cart"),
 			inverseJoinColumns = @JoinColumn(name = "id_product"))
-	private Set<Product> products;
+	private List<Product> products;
 
 	public int getId_product() {
 		return id_product;
@@ -47,11 +47,11 @@ public class Cart {
 		this.user = user;
 	}
 
-	public Set<Product> getProducts() {
+	public List<Product> getProducts() {
 		return products;
 	}
 
-	public void setProducts(Set<Product> products) {
+	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
 	
