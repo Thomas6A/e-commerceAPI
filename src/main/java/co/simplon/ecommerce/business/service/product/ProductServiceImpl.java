@@ -3,11 +3,13 @@ package co.simplon.ecommerce.business.service.product;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import co.simplon.ecommerce.business.convert.ProductConvert;
 import co.simplon.ecommerce.business.dto.ProductDTO;
 import co.simplon.ecommerce.persistance.repository.IProductRepository;
 
+@Service
 public class ProductServiceImpl implements IProductService {
 
 	private IProductRepository repo;
