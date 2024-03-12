@@ -6,7 +6,7 @@ public class ProductDTO {
 	
 	private String product_name;
 
-	private String product_price;
+	private double product_price;
 	
 	private String product_description;
 	
@@ -28,11 +28,11 @@ public class ProductDTO {
 		this.product_name = product_name;
 	}
 
-	public String getProduct_price() {
+	public double getProduct_price() {
 		return product_price;
 	}
 
-	public void setProduct_price(String product_price) {
+	public void setProduct_price(double product_price) {
 		this.product_price = product_price;
 	}
 
