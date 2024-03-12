@@ -1,7 +1,5 @@
 package co.simplon.ecommerce.presentation.controller.product;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,13 +10,13 @@ import co.simplon.ecommerce.business.service.product.IProductService;
 
 @RestController
 @CrossOrigin
-public class GetProductsController {
+public class CreateProductController {
 
 	private IProductService service;
 
 	@GetMapping("/products")
-	public List<ProductDTO> getProducts() {
-		return service.getProducts();
+	public void createProduct(ProductDTO dto) {
+		service.createProduct(dto);
 	}
 
 	@Autowired
