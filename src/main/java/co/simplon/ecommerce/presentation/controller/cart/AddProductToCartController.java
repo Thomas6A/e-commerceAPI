@@ -14,9 +14,9 @@ import co.simplon.ecommerce.business.service.cart.ICartService;
 @CrossOrigin
 public class AddProductToCartController {
 	
-private ICartService service;
+	private ICartService service;
 	
-	@PutMapping("/cart")
+	@PutMapping("/cartaddproduct")
 	public void addProductToCart(@RequestBody CartDTO cart, @RequestBody ProductDTO product) {
 		service.addProductToCart(cart, product);
 	}

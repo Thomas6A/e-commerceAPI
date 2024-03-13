@@ -2,22 +2,23 @@ package co.simplon.ecommerce.presentation.controller.cart;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.simplon.ecommerce.business.dto.UserDTO;
+import co.simplon.ecommerce.business.dto.CartDTO;
+import co.simplon.ecommerce.business.dto.ProductDTO;
 import co.simplon.ecommerce.business.service.cart.ICartService;
 
 @RestController
 @CrossOrigin
-public class GetCartByUserController {
+public class DeleteProductFromCart {
 	
 	private ICartService service;
 	
-	@GetMapping("/cart")
-	public void getCartByUser(@RequestBody UserDTO dto) {
-		service.getCartByUser(dto);
+	@PutMapping("/cartdeleteproduct")
+	public void deleteProductToCart(@RequestBody CartDTO cart, @RequestBody ProductDTO product) {
+		service.deleteProductToCart(cart, product);
 	}
 	
 	@Autowired
