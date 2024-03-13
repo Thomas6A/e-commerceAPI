@@ -10,10 +10,10 @@ public interface ICartService {
 	
 	public CartDTO getCartByUser(UserDTO user);
 	
-	public void addProductToCart(ProductDTO product);
+	public void addProductToCart(CartDTO cart, ProductDTO product);
 	
-	public void deleteProductToCart(ProductDTO product);
+	public void deleteProductToCart(CartDTO cart, ProductDTO product);
 	
-	public void deleteAllProductToCart();
+	public void deleteAllProductToCart(CartDTO cart);
 
 }

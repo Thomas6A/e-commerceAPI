@@ -1,5 +1,8 @@
 package co.simplon.ecommerce.business.service.cart;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,20 +30,24 @@ public class CartServiceImpl implements ICartService {
 	}
 
 	@Override
-	public void addProductToCart(ProductDTO product) {
-		// TODO Auto-generated method stub
+	public void addProductToCart(CartDTO cart, ProductDTO product) {
+		cart.getProducts().add(product);
+		createCart(cart);
 		
 	}
 
 	@Override
-	public void deleteProductToCart(ProductDTO product) {
-		// TODO Auto-generated method stub
+	public void deleteProductToCart(CartDTO cart, ProductDTO product) {
+		cart.getProducts().remove(product);
+		createCart(cart);
 		
 	}
 
 	@Override
-	public void deleteAllProductToCart() {
-		// TODO Auto-generated method stub
+	public void deleteAllProductToCart(CartDTO cart) {
+		List<ProductDTO> emptyProducts = new ArrayList<>();
+		cart.setProducts(emptyProducts);
+		createCart(cart);
 		
 	}
 	
