@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="contact")
+@Table(name="product")
 public class Product {
 	
 	@Id
@@ -19,7 +19,7 @@ public class Product {
 	private String product_name;
 	
 	@Column(name="product_price")
-	private String product_price;
+	private double product_price;
 	
 	@Column(name="product_description")
 	private String product_description;
@@ -43,11 +43,11 @@ public class Product {
 		this.product_name = product_name;
 	}
 
-	public String getProduct_price() {
+	public double getProduct_price() {
 		return product_price;
 	}
 
-	public void setProduct_price(String product_price) {
+	public void setProduct_price(double product_price) {
 		this.product_price = product_price;
 	}
 
