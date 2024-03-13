@@ -13,7 +13,7 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int id_user;
 	
 	@Column
 	private String username;
@@ -24,12 +24,12 @@ public class User {
 	@Column
 	private String user_role;
 
-	public int getId() {
-		return id;
+	public int getId_user() {
+		return id_user;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId_user(int id_user) {
+		this.id_user = id_user;
 	}
 
 	public String getUsername() {

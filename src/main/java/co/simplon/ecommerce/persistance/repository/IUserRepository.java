@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import co.simplon.ecommerce.persistance.entity.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface IUserRepository extends JpaRepository<User, Integer> {
 
 }
