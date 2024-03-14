@@ -3,10 +3,10 @@ package co.simplon.ecommerce.presentation.controller.cart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.simplon.ecommerce.business.dto.UserDTO;
+import co.simplon.ecommerce.business.dto.CartDTO;
 import co.simplon.ecommerce.business.service.cart.ICartService;
 
 @RestController
@@ -15,9 +15,9 @@ public class GetCartByUserController {
 	
 	private ICartService service;
 	
-	@GetMapping("/cart")
-	public void getCartByUser(@RequestBody UserDTO dto) {
-		service.getCartByUser(dto);
+	@GetMapping("/cart/{user}")
+	public CartDTO getCartByUser(@PathVariable int user) {
+		return service.getCartByUser(user);
 	}
 	
 	@Autowired

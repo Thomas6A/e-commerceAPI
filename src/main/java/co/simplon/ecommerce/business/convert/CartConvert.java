@@ -19,7 +19,7 @@ public class CartConvert {
 	
 	public CartDTO convertEntityToDTO(final Cart cart) {
 		CartDTO dto = new CartDTO();
-		dto.setId(cart.getId_product());
+		dto.setId(cart.getId_cart());
 		dto.setUser(UserConvert.getInstance().convertEntityToDTO(cart.getUser()));
 		dto.setProducts(ProductConvert.getInstance().convertListEntityToListDto(cart.getProducts()));
 		return dto;
@@ -35,7 +35,7 @@ public class CartConvert {
 	
 	public Cart convertDTOToEntity(final CartDTO dto) {
 		Cart cart = new Cart();
-		cart.setId_product(dto.getId());
+		cart.setId_cart(dto.getId());
 		cart.setUser(UserConvert.getInstance().convertDTOToEntity(dto.getUser()));
 		cart.setProducts(ProductConvert.getInstance().convertListDtoToListEntity(dto.getProducts()));
 		return cart;

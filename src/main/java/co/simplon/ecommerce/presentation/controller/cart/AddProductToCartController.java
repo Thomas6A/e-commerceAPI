@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.simplon.ecommerce.business.dto.CartDTO;
-import co.simplon.ecommerce.business.dto.ProductDTO;
 import co.simplon.ecommerce.business.service.cart.ICartService;
 
 @RestController
@@ -17,8 +16,8 @@ public class AddProductToCartController {
 	private ICartService service;
 	
 	@PutMapping("/cartaddproduct")
-	public void addProductToCart(@RequestBody CartDTO cart, @RequestBody ProductDTO product) {
-		service.addProductToCart(cart, product);
+	public void addProductToCart(@RequestBody CartDTO cart) {
+		service.addProductToCart(cart);
 	}
 	
 	@Autowired

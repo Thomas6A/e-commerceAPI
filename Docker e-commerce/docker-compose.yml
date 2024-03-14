@@ -6,7 +6,7 @@ services:
       - MYSQL_DATABASE=ecommerce
       - MYSQL_ROOT_PASSWORD=MySQL08022000
     ports:
-      - 3306:3306
+      - 3307:3306
     volumes:
           - ./:/docker-entrypoint-initdb.d
           - db:/var/lib/mysql

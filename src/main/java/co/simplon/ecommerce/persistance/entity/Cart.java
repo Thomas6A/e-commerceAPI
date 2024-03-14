@@ -18,7 +18,7 @@ public class Cart {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_product;
+	private int id_cart;
 	
 	@OneToOne
 	@JoinColumn(name = "id_user")
@@ -31,12 +31,12 @@ public class Cart {
 			inverseJoinColumns = @JoinColumn(name = "id_product"))
 	private List<Product> products;
 
-	public int getId_product() {
-		return id_product;
+	public int getId_cart() {
+		return id_cart;
 	}
 
-	public void setId_product(int id_product) {
-		this.id_product = id_product;
+	public void setId_cart(int id_cart) {
+		this.id_cart = id_cart;
 	}
 
 	public User getUser() {

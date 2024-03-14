@@ -7,10 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.simplon.ecommerce.business.convert.CartConvert;
-import co.simplon.ecommerce.business.convert.UserConvert;
 import co.simplon.ecommerce.business.dto.CartDTO;
 import co.simplon.ecommerce.business.dto.ProductDTO;
-import co.simplon.ecommerce.business.dto.UserDTO;
 import co.simplon.ecommerce.persistance.repository.ICartRepository;
 
 @Service
@@ -25,13 +23,12 @@ public class CartServiceImpl implements ICartService {
 	}
 
 	@Override
-	public CartDTO getCartByUser(UserDTO user) {
-		return CartConvert.getInstance().convertEntityToDTO(repo.findByUser(UserConvert.getInstance().convertDTOToEntity(user)));
+	public CartDTO getCartByUser(int user) {
+		return CartConvert.getInstance().convertEntityToDTO(repo.findByUser(user));
 	}
 
 	@Override
-	public void addProductToCart(CartDTO cart, ProductDTO product) {
-		cart.getProducts().add(product);
+	public void addProductToCart(CartDTO cart) {
 		createCart(cart);
 		
 	}
