@@ -1,7 +1,6 @@
 package co.simplon.ecommerce.business.service.cart;
 
 import co.simplon.ecommerce.business.dto.CartDTO;
-import co.simplon.ecommerce.business.dto.ProductDTO;
 
 public interface ICartService {
 	
@@ -11,7 +10,7 @@ public interface ICartService {
 	
 	public void addProductToCart(CartDTO cart);
 	
-	public void deleteProductToCart(CartDTO cart, ProductDTO product);
+	public void deleteProductToCart(CartDTO cart);
 	
 	public void deleteAllProductToCart(CartDTO cart);
 

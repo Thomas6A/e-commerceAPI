@@ -34,8 +34,7 @@ public class CartServiceImpl implements ICartService {
 	}
 
 	@Override
-	public void deleteProductToCart(CartDTO cart, ProductDTO product) {
-		cart.getProducts().remove(product);
+	public void deleteProductToCart(CartDTO cart) {
 		createCart(cart);
 		
 	}
