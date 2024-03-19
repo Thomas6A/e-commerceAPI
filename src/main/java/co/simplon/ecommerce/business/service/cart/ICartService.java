@@ -1,5 +1,7 @@
 package co.simplon.ecommerce.business.service.cart;
 
+import java.util.List;
+
 import co.simplon.ecommerce.business.dto.CartDTO;
 
 public interface ICartService {
@@ -13,5 +15,7 @@ public interface ICartService {
 	public void deleteProductToCart(CartDTO cart);
 	
 	public void deleteAllProductToCart(CartDTO cart);
+	
+	public List<CartDTO> getAllCart();
 
 }

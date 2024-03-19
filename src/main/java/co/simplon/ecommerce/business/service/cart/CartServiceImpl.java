@@ -26,6 +26,11 @@ public class CartServiceImpl implements ICartService {
 	public CartDTO getCartByUser(int user) {
 		return CartConvert.getInstance().convertEntityToDTO(repo.findByUser(user));
 	}
+	
+	@Override
+	public List<CartDTO> getAllCart(){
+		return CartConvert.getInstance().convertListEntityToListDTO(repo.findAll());
+	}
 
 	@Override
 	public void addProductToCart(CartDTO cart) {
@@ -51,5 +56,7 @@ public class CartServiceImpl implements ICartService {
 	public void setRepo(ICartRepository repo) {
 		this.repo = repo;
 	}
+
+	
 	
 }
